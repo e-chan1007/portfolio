@@ -11,4 +11,12 @@
   height: unquote("calc(100vh - 5rem)");
   margin-top: 3.5rem;
 }
+
+.page-enter-active, {
+  transition: opacity 0.8s;
+}
+
+.page-enter {
+  opacity: 0;
+}
 </style>

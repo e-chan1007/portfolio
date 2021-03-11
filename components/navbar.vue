@@ -48,7 +48,6 @@ export default Vue.extend({
       links: {
         "Home": "/",
         "About": "/about",
-        "Articles": "/articles",
         "Works": "/works"
       }
     };
