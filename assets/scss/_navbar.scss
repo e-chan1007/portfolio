@@ -281,6 +281,10 @@
     .show > .nav-link,
     .nav-link.active {
       color: $navbar-dark-active-color;
+
+      &.active {
+        font-weight: 700;
+      }
     }
   }
 

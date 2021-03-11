@@ -1,5 +1,5 @@
 import TBootstrap from "~/node_modules/@types/bootstrap";
-import bootstrap from "bootstrap";
+import * as bootstrap from "bootstrap";
 import Vue from "vue";
 
 declare module "vue/types/vue" {
