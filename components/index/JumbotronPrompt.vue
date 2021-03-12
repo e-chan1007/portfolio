@@ -6,24 +6,29 @@
       ref="shellContainer"
       class="shell p-sm-4 p-3 container-lg">
       <!-- eslint-disable -->
-      <div v-if="isIndexVisible">Welcome to e-chan's Portfolio
-
-        <table style="margin-left: 1em;">
-          <col style="width: 8em;"/>
+      <div v-if="isIndexVisible"><span>Welcome to e-chan's Portfolio</span>
+        <table style="width: 100%; margin-left: 1em;">
+          <col style="width: 6em;"/>
           <tbody>
-            <tr><td>* About me:</td><td><nuxt-link to="/about" :class="{active: $route.path==='/about'}">https://www.e-chan.cf/about</nuxt-link></td></tr>
-            <!-- <tr><td>* Articles:</td><td><nuxt-link to="/articles" :class="{active: $route.path==='/articles'}">https://www.e-chan.cf/articles</nuxt-link></td></tr>-->
-            <tr><td>* Works:</td><td><nuxt-link to="/works" :class="{active: $route.path==='/works'}">https://www.e-chan.cf/works</nuxt-link></td></tr>
+            <tr><td>* About me:</td><td><nuxt-link to="/about">https://e-chan.cf/about</nuxt-link></td></tr>
+            <!-- <tr><td>* Articles:</td><td><nuxt-link to="/articles" :class="{active: $route.path==='/articles'}">https://e-chan.cf/articles</nuxt-link></td></tr>-->
+            <tr><td>* Works:</td><td><nuxt-link to="/works">https://e-chan.cf/works</nuxt-link></td></tr>
+            <tr />
+            <tr><td>* GitHub:</td><td><a href="https://github.com/e-chan1007" target="_blank" rel="noopener noreferrer">https://github.com/e-chan1007</a></td></tr>
+            <tr><td>* Qiita:</td><td><a href="https://qiita.com/e_chan1007" target="_blank" rel="noopener noreferrer">https://qiita.com/e_chan1007</a></td></tr>
+            <tr><td>* Twitter:</td><td><a href="https://twitter.com/e_chan1007" target="_blank" rel="noopener noreferrer">https://twitter.com/e_chan1007</a></td></tr>
+            <tr><td>* Zenn:</td><td><a href="https://zenn.dev/e_chan1007" target="_blank" rel="noopener noreferrer">https://zenn.dev/e_chan1007</a></td></tr>
           </tbody>
         </table>
         <br>
-      </div>{{ postText }}<div class="command-input">
+      </div><span>{{ postText }}</span><div class="command-input">
         <input
-        autofocus
+          autofocus
+          id="command-input"
           ref="commandInput"
           v-model="command"
           @input="e => command = e.target.value"
-          @keypress.enter="onCommandSent"><span class="carret" /></div>
+          @keypress.enter="onCommandSent"><span class="carret" /><label for="command-input" style=" width: 0; opacity: 0;">コマンドを入力</label></div>
       <div
         ref="commandPreview"
         class="d-inline-block"
@@ -38,7 +43,7 @@
 import Vue from "vue";
 export default Vue.extend({
   data() {
-    return { isIndexVisible: false, prompt: "e-chan1007@e-chan.cf ~$ ", command: "", postText: "" };
+    return { isIndexVisible: true, prompt: "e-chan1007@e-chan.cf ~$ ", command: "", postText: "" };
   },
   head() {
     return { titleTemplate: "" };
@@ -51,7 +56,6 @@ export default Vue.extend({
     }
   },
   async mounted() {
-    this.isIndexVisible = true;
     this.postText += this.prompt;
   },
   methods: {
@@ -143,7 +147,7 @@ export default Vue.extend({
   position: relative;
   height: 100%;
   overflow: none;
-  background-image: url("/images/sky.jpg");
+  background-image: url("/images/sky.webp");
   background-position: 0 65%;
   background-size: cover;
 
@@ -166,6 +170,8 @@ export default Vue.extend({
     color: $white;
     word-break: break-all;
     white-space: pre-line !important;
+
+    span { display: inline; }
 
     .command-input {
       position: relative;

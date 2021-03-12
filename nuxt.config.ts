@@ -10,7 +10,8 @@ const nuxtConfig: NuxtConfig = {
   buildModules: [
     "@nuxt/typescript-build",
     "@nuxtjs/style-resources",
-    ["@nuxtjs/stylelint-module", { fix: true }]
+    ["@nuxtjs/stylelint-module", { fix: true }],
+    "nuxt-purgecss"
   ],
   modules: ["@nuxtjs/pwa", "@nuxtjs/dotenv"],
   plugins: [{ src: "~/plugins/bootstrap", mode: "client" }],
@@ -25,9 +26,11 @@ const nuxtConfig: NuxtConfig = {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+    ]
   },
-  loading: { color: "#00AAFF" },
+  loading: { color: "#0195E6" },
   css: [
     "~/assets/scss/_fonts.scss",
     "~/assets/scss/bootstrap.scss"
@@ -38,16 +41,17 @@ const nuxtConfig: NuxtConfig = {
       name: "いーちゃん",
       description: "いーちゃんのポートフォリオ・Webサイトです。自己紹介や制作したプロジェクト、執筆した記事について掲載しています。",
       lang: "ja",
-      theme_color: "#00AAFF"
+      theme_color: "#0195E6"
     },
     manifest: {
       name: "いーちゃん",
       short_name: "いーちゃん",
       description: "いーちゃんのポートフォリオ・Webサイトです。自己紹介や制作したプロジェクト、執筆した記事について掲載しています。",
       lang: "ja",
-      theme_color: "#00AAFF"
+      theme_color: "#0195E6"
     },
     workbox: {
+      dev: true,
       offline: false,
       skipWaiting: true,
       clientsClaim: true,
@@ -66,8 +70,8 @@ const nuxtConfig: NuxtConfig = {
 
 try {
   (nuxtConfig.server as NuxtOptionsServer).https = {
-    key: fs.readFileSync(path.resolve(__dirname, "ssl/key.pem")),
-    cert: fs.readFileSync(path.resolve(__dirname, "ssl/cert.pem"))
+    key: fs.readFileSync(path.resolve(__dirname, "ssl/localhost.key")),
+    cert: fs.readFileSync(path.resolve(__dirname, "ssl/localhost.crt"))
   };
 } catch (ignored) {
   delete (nuxtConfig.server as NuxtOptionsServer).https;

@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon node_modules/@nuxt/cli/bin/nuxt-cli.js --watch server",
-    "build": "nuxt-ts build",
+    "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node node_modules/@nuxt/cli/bin/nuxt-cli.js",
-    "generate": "nuxt-ts generate",
+    "generate": "nuxt generate",
     "lint": "eslint --ext .js,.ts,.vue . && stylelint --fix \"**/*.{css,scss}\""
   },
   "dependencies": {
@@ -17,12 +17,12 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "cross-env": "^7.0.2",
     "express": "^4.16.4",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.15.3",
     "ts-loader": "^8.0.4"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",
-    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxt/typescript-build": "^2.1.0",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
@@ -41,6 +41,7 @@
     "hard-source-webpack-plugin": "^0.13.1",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
+    "nuxt-purgecss": "^1.0.0",
     "popper.js": "1.16.1",
     "prettier": "^2.2.1",
     "sass-loader": "^10.0.2",
