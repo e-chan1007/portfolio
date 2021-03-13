@@ -10,7 +10,7 @@
 h1 {
   display: inline-block;
   padding: 0 0.2em;
-  margin: 2rem 0;
+  margin: 2.5rem 0 2rem 0;
   font-size: 4rem;
   vertical-align: middle;
   background: linear-gradient(transparent 65%, $accent 65%);

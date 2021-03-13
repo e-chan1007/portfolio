@@ -1,5 +1,6 @@
 <template>
   <div
+    ref="shellBg"
     class="shell-bg"
     @click="$refs.commandInput && $refs.commandInput.focus();">
     <div
@@ -28,7 +29,8 @@
           ref="commandInput"
           v-model="command"
           @input="e => command = e.target.value"
-          @keypress.enter="onCommandSent"><span class="carret" /><label for="command-input" style=" width: 0; opacity: 0;">コマンドを入力</label></div>
+          @keypress.enter="onCommandSent"><span class="carret" /></div>
+          <label for="command-input" style="opacity: 0;">コマンドを入力</label>
       <div
         ref="commandPreview"
         class="d-inline-block"
@@ -99,7 +101,11 @@ export default Vue.extend({
           if (/-(?:rf|fr)/.test(params[0])) {
             if (params.length > 1) {
               if (/^\/\*?$/.test(params[1])) {
-                this.postText += `いーちゃん: お願い、消さないで…。\n`;
+                this.postText += [
+                  "いーちゃん: お願い、消さないで…。\n",
+                  "いーちゃん: 気づいてしまいましたか、このコマンドの存在に...。さすがです!\n",
+                  "いーちゃん: 本番環境で入力しないように気をつけてくださいね...。\n"
+                ][Math.floor(Math.random() * 3)];
               } else if (/^\/?(about|articles|works)?$/.test(params[1])) {
                 this.postText += `rm: cannot remove '${params[1]}': Permission denied\n`;
               } else {
@@ -145,8 +151,8 @@ export default Vue.extend({
 
 .shell-bg {
   position: relative;
-  height: 100%;
-  overflow: none;
+  height: unquote("calc(100vh - 5rem)");
+  overflow: hidden;
   background-image: url("/images/sky.webp");
   background-position: 0 65%;
   background-size: cover;

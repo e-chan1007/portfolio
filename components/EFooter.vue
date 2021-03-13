@@ -1,5 +1,5 @@
 <template>
-  <footer class="d-flex flex-row justify-content-center align-items-center w-100 bg-secondary position-relative">
+  <footer class="d-flex flex-row justify-content-center align-items-center w-100 bg-secondary position-relative fixed-bottom">
     <small>&copy; 2021 いーちゃん</small>
   </footer>
 </template>

@@ -51,7 +51,6 @@ const nuxtConfig: NuxtConfig = {
       theme_color: "#0195E6"
     },
     workbox: {
-      dev: true,
       offline: false,
       skipWaiting: true,
       clientsClaim: true,

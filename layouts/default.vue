@@ -5,11 +5,11 @@
       class="flex-grow-0" />
     <div
       ref="main"
-      style="height: 100vh;">
+      style="height: 100%; min-height: calc(100vh - 3.5rem); margin-top: 3.5rem;">
       <nuxt
         class="flex-grow-1 h-100" />
     </div>
-    <e-footer class="footer flex-grow-0" />
+    <e-footer class="footer" />
   </div>
 </template>
 
@@ -26,7 +26,7 @@ export default Vue.extend({
 
       const mainStyle = (this.$refs.main as HTMLDivElement).style;
       mainStyle.marginTop = `${(document.querySelector("nav.navbar") as HTMLElement).clientHeight}px`;
-      mainStyle.height = `calc(${window.innerHeight}px - ${(document.querySelector("nav.navbar") as HTMLElement).clientHeight}px - 1.5rem)`;
+      mainStyle.minHeight = `calc(${window.innerHeight}px - ${(document.querySelector("nav.navbar") as HTMLElement).clientHeight}px - 1.5rem)`;
     };
     window.addEventListener("resize", setFillHeight);
     setFillHeight();

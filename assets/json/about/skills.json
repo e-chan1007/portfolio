@@ -1,0 +1,82 @@
+[
+  {
+    "label": "Programming Language",
+    "skills": [
+      {
+        "label": "JavaScript",
+        "level": "good",
+        "description": "Node.jsやGoogle Apps Script上でLINE Botの開発やフロントエンド開発をしています。",
+        "usedHere": false
+      },
+      {
+        "label": "TypeScript",
+        "level": "good",
+        "description": "2020年以降のプロジェクトで利用し、any型の使用を抑えた型安全な開発に努めています。",
+        "usedHere": true
+      },
+      {
+        "label": "PHP",
+        "level": "good",
+        "description": "知人と趣味で運営するMinecraftサーバーのホームページなどを作成しました。",
+        "usedHere": false
+      },
+      {
+        "label": "Java",
+        "level": "little",
+        "description": "Minecraftサーバーの拡張機能(プラグイン)や、Androidアプリの開発をしています。",
+        "usedHere": false
+      }
+    ]
+  },
+  {
+    "label": "Front-end Development",
+    "skills": [
+      {
+        "label": "Vue.js",
+        "level": "good",
+        "description": "2019年以降の開発で利用していました。最近はVue.js単体で使うことは少なく、Nuxt.jsを用いています。",
+        "usedHere": false
+      },
+      {
+        "label": "Nuxt.js",
+        "level": "good",
+        "description": "2020年以降のほとんどの開発にTypeScriptと組み合わせて利用しています。",
+        "usedHere": true
+      },
+      {
+        "label": "React",
+        "level": "ever",
+        "description": "Scratchを校内公開用に手直しした際に利用しました。",
+        "usedHere": false
+      },
+      {
+        "label": "Bootstrap",
+        "level": "good",
+        "description": "一番よく使うWeb用UIライブラリです。",
+        "usedHere": true
+      },
+      {
+        "label": "Bulma",
+        "level": "good",
+        "description": "中学2・3年次に多用していたライブラリです。",
+        "usedHere": false
+      },
+      {
+        "label": "Vuetify",
+        "level": "good",
+        "description": "マテリアルデザインのアプリケーション制作に利用しています。",
+        "usedHere": false
+      }
+    ]
+  },
+  {
+    "label": "Others",
+    "skills": [
+      {
+        "label": "Firebase",
+        "level": "good",
+        "description": "Authentication, Storage, Cloud Firestoreなどの使用経験があります。"
+      }
+    ]
+  }
+]
