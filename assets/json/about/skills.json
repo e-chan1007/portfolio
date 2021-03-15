@@ -25,6 +25,12 @@
         "level": "little",
         "description": "Minecraftサーバーの拡張機能(プラグイン)や、Androidアプリの開発をしています。",
         "usedHere": false
+      },
+      {
+        "label": "Flutter(Dart)",
+        "level": "ever",
+        "description": "TOTP(Time-Based One-Time Password Algorithm: RFC6238)の簡易的な実装をしてみました。",
+        "usedHere": false
       }
     ]
   },
