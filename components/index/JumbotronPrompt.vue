@@ -90,10 +90,11 @@ export default Vue.extend({
             exit
             help
             ls
-            rm [-rf] [dir]\n`;
+            rm [dir]\n`;
         break;
       case "ls":
-        this.postText += `about    articles works\n`;
+        // this.postText += `about    articles works\n`;
+        this.postText += `about    works\n`;
         break;
       case "rm":
         console.log(params);
