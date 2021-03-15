@@ -62,26 +62,40 @@
           :skill="skill" />
       </div>
     </template>
+    <section-title id="contributions">
+      Contributions
+    </section-title>
+    <div class="d-flex flex-row align-items-center justify-content-center my-2">
+      <a
+        href="https://github.com/e-chan1007"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          src="https://raw.githubusercontent.com/e-chan1007/e-chan1007/main/profile-summary-card-output/nord_bright/0-profile-details.svg"
+          class="img-fluid mb-4"
+          alt="GitHub コントリビューション数の推移">
+      </a>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 
-type SocialLink = {
-  label: string,
-  baseUrl: string,
-  id: string
-}
-type SkillCategory = {
-  label: string,
-  skills: {
+    type SocialLink = {
+    label: string,
+    baseUrl: string,
+    id: string
+    }
+    type SkillCategory = {
+    label: string,
+    skills: {
     label: string,
     level: "good" | "little" | "ever" | undefined,
     description: string,
     usedHere: boolean
-  }[]
-}
+    }[]
+    }
 
 export default Vue.extend({
   data() {
@@ -96,28 +110,32 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss" scoped>
-@import "~/assets/scss/bootstrap-utilities.scss";
+    <style
+      lang="scss"
+      scoped>
+      @import "~/assets/scss/bootstrap-utilities.scss";
 
-.link-icon {
-  display: inline-block;
-  width: 1em;
-}
+      .link-icon {
+        display: inline-block;
+        width: 1em;
+      }
 
-.skill-category-label {
-  display: inline-block;
-  font-size: 1.2rem;
-  color: $gray-600;
-  vertical-align: middle;
+      .skill-category-label {
+        display: inline-block;
+        font-size: 1.2rem;
+        color: $gray-600;
+        vertical-align: middle;
 
-  &::before,
-  &::after {
-    display: inline-block;
-    width: 0.5em;
-    height: 0.5em;
-    margin-top: 0.5em;
-    content: "";
-    border-top: 1px solid $gray-600;
-  }
-}
-</style>
+        &::before,
+        &::after {
+          display: inline-block;
+          width: 0.5em;
+          height: 0.5em;
+          margin-top: 0.5em;
+          content: "";
+          border-top: 1px solid $gray-600;
+        }
+      }
+    </style>
+  </div>
+</template>
