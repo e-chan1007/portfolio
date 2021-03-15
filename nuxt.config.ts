@@ -10,8 +10,7 @@ const nuxtConfig: NuxtConfig = {
   buildModules: [
     "@nuxt/typescript-build",
     "@nuxtjs/style-resources",
-    ["@nuxtjs/stylelint-module", { fix: true }],
-    "nuxt-purgecss"
+    ["@nuxtjs/stylelint-module", { fix: true }]
   ],
   modules: ["@nuxtjs/pwa", "@nuxtjs/dotenv"],
   plugins: [{ src: "~/plugins/bootstrap", mode: "client" }],
