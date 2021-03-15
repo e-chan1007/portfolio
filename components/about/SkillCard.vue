@@ -58,12 +58,13 @@ export default Vue.extend({
 
 .skill-card {
   padding: 16px;
-  border: 1px solid $gray-600;
+  border: 1px solid $gray-500;
 
   h4 {
     img {
       height: 1em;
       margin-right: 2px;
+      margin-bottom: 4px;
     }
   }
 
