@@ -5,7 +5,7 @@
         class="navbar-brand"
         to="/"
         @click.native="hideCollapse">
-        e-chan.cf
+        いーちゃん
       </nuxt-link>
       <button
         class="navbar-toggler"
