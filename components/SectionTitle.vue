@@ -11,11 +11,11 @@ h2 {
   @extend h2;
 
   display: inline-block;
-  padding: 0 0.2em;
   margin: 2rem 0 1.5rem 0;
   vertical-align: middle;
 
   span {
+    padding: 0 0.2em;
     background: linear-gradient(transparent 65%, $accent 65%);
   }
 }
