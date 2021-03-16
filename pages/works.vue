@@ -75,7 +75,15 @@ export default Vue.extend({
     return { works: require("~/assets/json/works/works.json") as Work[], activeWork: {} };
   },
   head() {
-    return { title: "Works" };
+    return {
+      title: "Works",
+      meta: [
+        { hid: "og:url", property: "og:url", content: "https://e-chan.cf/works" },
+        { hid: "og:title", property: "og:title", content: "Works - いーちゃん" },
+        { hid: "description", name: "description", content: "いーちゃんが作成したサイトなどについて掲載しています。" },
+        { hid: "og:description", property: "og:description", content: "いーちゃんが作成したサイトなどについて掲載しています。" }
+      ]
+    };
   },
   methods: {
     openModal(work: Work) {

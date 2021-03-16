@@ -105,7 +105,15 @@ export default Vue.extend({
     };
   },
   head() {
-    return { title: "About" };
+    return {
+      title: "About",
+      meta: [
+        { hid: "og:url", property: "og:url", content: "https://e-chan.cf/about" },
+        { hid: "og:title", property: "og:title", content: "About - いーちゃん" },
+        { hid: "description", name: "description", content: "いーちゃんの自己紹介(アカウント・スキルなど)を掲載しています。" },
+        { hid: "og:description", property: "og:description", content: "いーちゃんの自己紹介(アカウント・スキルなど)を掲載しています。" }
+      ]
+    };
   }
 });
 </script>

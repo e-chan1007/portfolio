@@ -1,6 +1,3 @@
 User-Agent:*
-Disallow: /_nuxt/
-Disallow: /fonts/
-Disallow: /images/
 
 Sitemap: https://e-chan.cf/sitemap.xml

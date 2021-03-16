@@ -19,11 +19,19 @@ const nuxtConfig: NuxtConfig = {
 
   head: {
     htmlAttrs: { lang: "ja" },
+    headAttrs: { prefix: "og: https://ogp.me/ns#" },
     title: "いーちゃん",
     titleTemplate: "%s - いーちゃん",
     meta: [
       { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" }
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "いーちゃん" },
+      { hid: "og:url", property: "og:url", content: "https://e-chan.cf" },
+      { hid: "og:title", property: "og:title", content: "いーちゃん" },
+      { hid: "og:description", property: "og:description", content: "いーちゃんのポートフォリオ・Webサイトです。自己紹介や制作したプロジェクトについて掲載しています。" },
+      { property: "og:image", content: "https://e-chan.cf/images/ogp.png" }
+
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
@@ -38,14 +46,14 @@ const nuxtConfig: NuxtConfig = {
   pwa: {
     meta: {
       name: "いーちゃん",
-      description: "いーちゃんのポートフォリオ・Webサイトです。自己紹介や制作したプロジェクト、執筆した記事について掲載しています。",
+      description: "いーちゃんのポートフォリオ・Webサイトです。自己紹介や制作したプロジェクトについて掲載しています。",
       lang: "ja",
       theme_color: "#0195E6"
     },
     manifest: {
       name: "いーちゃん",
       short_name: "いーちゃん",
-      description: "いーちゃんのポートフォリオ・Webサイトです。自己紹介や制作したプロジェクト、執筆した記事について掲載しています。",
+      description: "いーちゃんのポートフォリオ・Webサイトです。自己紹介や制作したプロジェクトについて掲載しています。",
       lang: "ja",
       theme_color: "#0195E6"
     },
