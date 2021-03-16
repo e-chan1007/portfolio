@@ -12,7 +12,7 @@ const nuxtConfig: NuxtConfig = {
     "@nuxtjs/style-resources",
     ["@nuxtjs/stylelint-module", { fix: true }]
   ],
-  modules: ["@nuxtjs/pwa", "@nuxtjs/sitemap", "@nuxtjs/dotenv"],
+  modules: ["@nuxtjs/pwa", "@nuxtjs/dotenv"],
   plugins: [{ src: "~/plugins/bootstrap", mode: "client" }],
   components: true,
   telemetry: false,
@@ -71,8 +71,7 @@ const nuxtConfig: NuxtConfig = {
         }
       }]
     }
-  },
-  sitemap: { hostname: "https://e-chan.cf/" }
+  }
 };
 
 try {
