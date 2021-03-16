@@ -1,5 +1,7 @@
 <template>
-  <div class="col-lg-4 col-md-6 p-2">
+  <div
+    v-if="work"
+    class="col-lg-4 col-md-6 p-2">
     <div class="work-card">
       <img
         class="img-fluid"

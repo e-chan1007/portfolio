@@ -1,5 +1,7 @@
 <template>
-  <div class="col-lg-4 col-md-6 p-2">
+  <div
+    v-if="skill"
+    class="col-lg-4 col-md-6 p-2">
     <div class="skill-card h-100">
       <div class="d-flex flex-row align-items-baseline justify-content-between">
         <div class="d-flex flex-column mb-3">
