@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex justify-content-center">
-    <h1><slot /></h1>
+    <h1><span><slot /></span></h1>
   </div>
 </template>
 
@@ -9,10 +9,14 @@
 
 h1 {
   display: inline-block;
-  padding: 0 0.2em;
   margin: 2.5rem 0 2rem 0;
   font-size: 4rem;
+  text-align: center;
   vertical-align: middle;
-  background: linear-gradient(transparent 65%, $accent 65%);
+
+  span {
+    padding: 0 0.2em;
+    background: linear-gradient(transparent 65%, $accent 65%);
+  }
 }
 </style>

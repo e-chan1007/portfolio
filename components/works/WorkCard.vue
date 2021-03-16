@@ -59,8 +59,9 @@ export default Vue.extend({
 
   h2 {
     position: absolute;
-    right: 12px;
-    bottom: 4px;
+    right: 8px;
+    bottom: 0;
+    z-index: 10;
     margin: 0;
     color: white;
     opacity: 0;
@@ -72,7 +73,7 @@ export default Vue.extend({
     }
 
     h2 {
-      bottom: 12px;
+      bottom: 4px;
       opacity: 1;
     }
   }

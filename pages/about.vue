@@ -71,7 +71,7 @@
         target="_blank"
         rel="noopener noreferrer">
         <img
-          src="https://raw.githubusercontent.com/e-chan1007/e-chan1007/main/profile-summary-card-output/nord_bright/0-profile-details.svg"
+          src="https://raw.githubusercontent.com/e-chan1007/e-chan1007/main/profile-summary-card-output/e-chan1007/0-profile-details.svg"
           class="img-fluid mb-4"
           alt="GitHub コントリビューション数の推移">
       </a>

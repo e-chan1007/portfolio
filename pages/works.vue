@@ -17,10 +17,12 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
+        <div
+          v-if="activeWork.id"
+          class="modal-content">
           <img
-            class="img-fluid rounded-top"
-            :src="activeWork ? `/images/works/bg/${activeWork.id}.webp` : ''"
+            class="img-fluid rounded-top border-bottom border-gray-500"
+            :src="`/images/works/bg/${activeWork.id}.webp`"
             :alt="activeWork.name">
           <div class="modal-body">
             <h1 class="mb-0">
@@ -28,6 +30,15 @@
             </h1>
             <p class="text-muted mb-2">
               {{ activeWork.date }}
+            </p>
+            <p
+              v-if="activeWork.tags.length > 0"
+              class="tags">
+              <span
+                v-for="tag in activeWork.tags"
+                :key="tag">
+                {{ tag }}
+              </span>
             </p>
             <p>{{ activeWork.description }}</p>
             <a
@@ -92,6 +103,16 @@ export default Vue.extend({
     background-color: rgba($white, 0.8) !important;
     border: 1px solid $gray-400;
     opacity: 1;
+  }
+
+  .tags {
+    span {
+      padding: 4px 8px;
+      margin: 2px 4px 2px 0;
+      font-size: 0.8rem;
+      border: 1px solid $gray-500;
+      border-radius: 4px;
+    }
   }
 }
 </style>

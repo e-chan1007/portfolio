@@ -76,7 +76,7 @@ export default Vue.extend({
     font-size: 0.9rem;
     color: $gray-600;
     border: 1px solid $gray-500;
-    border-radius: 1em;
+    border-radius: 4px;
   }
 
   .used-here {
