@@ -17,7 +17,7 @@
       </div>
     </div>
     <p class="my-2">
-      普通科高校2年生です。プログラミングは小学校4年生のときから始め、公開に至らなかったものを含め様々なプログラムを作成してきました。
+      普通科高校3年生です。プログラミングは小学校4年生のときから始め、公開に至らなかったものを含め様々なプログラムを作成してきました。
       2020年からはSGG(すごくなりたいがくせいぐるーぷ)のメンバーとしても活動しています。フロントエンド開発が主となっていますが、
       LINEBotやAndroidアプリ、Windowsソフトウェアの開発などもしています。最近は2021年1月に購入したRaspberry Pi 4を用いて
       様々なサーバーを実験的に立てています。他にも、簡単な動画編集や画像加工にも幅広く取り組んでいます。
@@ -118,32 +118,30 @@ export default Vue.extend({
 });
 </script>
 
-    <style
-      lang="scss"
-      scoped>
-      @import "~/assets/scss/bootstrap-utilities.scss";
+<style
+  lang="scss"
+  scoped>
+  @import "~/assets/scss/bootstrap-utilities.scss";
 
-      .link-icon {
-        display: inline-block;
-        width: 1em;
-      }
+  .link-icon {
+    display: inline-block;
+    width: 1em;
+  }
 
-      .skill-category-label {
-        display: inline-block;
-        font-size: 1.2rem;
-        color: $gray-600;
-        vertical-align: middle;
+  .skill-category-label {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: $gray-600;
+    vertical-align: middle;
 
-        &::before,
-        &::after {
-          display: inline-block;
-          width: 0.5em;
-          height: 0.5em;
-          margin-top: 0.5em;
-          content: "";
-          border-top: 1px solid $gray-600;
-        }
-      }
-    </style>
-  </div>
-</template>
+    &::before,
+    &::after {
+      display: inline-block;
+      width: 0.5em;
+      height: 0.5em;
+      margin-top: 0.5em;
+      content: "";
+      border-top: 1px solid $gray-600;
+    }
+  }
+</style>
