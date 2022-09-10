@@ -1,0 +1,53 @@
+richmenu-editor:
+  title: リッチメニューエディタ
+  repo: e-chan1007/line-richmenu-editor
+  url: https://richmenu.app.e-chan.me/
+  description: |-
+    LINE公式アカウントのトーク画面下部に表示される、リッチメニューを作成するツールです。
+    GUI・コードの両方で直感的に編集でき、アップロードまで一貫して行うことができます。
+  date: 2020/05〜
+  categories:
+  - webapp
+  - devtool
+  frontFramework: react
+  languages: 
+  - JavaScript
+
+pikagoro:
+  title: ピカゴロ
+  url: https://pikagoro.app.e-chan.me/
+  description: |-
+    音速と光速の差を用いて、雷の落下地点などを大まかに地図上に表示できるツールです。
+  date: 2020/08
+  categories:
+  - webapp
+  frontFramework: vue
+  languages:
+  - JavaScript
+
+trendowl:
+  title: TrendOwl
+  url: https://trendowl.sugokunaritai.dev/
+  description: |-
+    フェイクニュースを機械学習システムによって見分けるツールです。
+    Civictech Challenge Cup 2021において、Code for Japan賞を受賞しました。
+  date: 2021/10
+  categories:
+  - webapp
+  - ml
+  frontFramework: vue
+  languages:
+  - JavaScript
+  - Python
+
+nuxt-monaco-editor:
+  title: Nuxt Monaco Editor
+  url: https://e-chan1007.github.io/nuxt-monaco-editor/
+  repo: e-chan1007/nuxt-monaco-editor
+  description: |-
+    Nuxt.jsでMonaco Editorを簡単に使えるようにするモジュールです。
+  date: 2022/08〜
+  categories:
+  - library
+  languages:
+  - JavaScript

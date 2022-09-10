@@ -1,0 +1,38 @@
+@import "./utils";
+
+$primary: #0195E6;
+$secondary: #34495E;
+$accent: #F19C20;
+$black: #333333;
+$white: #FFFFFF;
+
+:root {
+  --primary-rgb: #{toRGB($primary)};
+  --secondary-rgb: #{toRGB($secondary)};
+  --accent-rgb: #{toRGB($accent)};
+  --black-rgb: #{toRGB(($black))};
+  --white-rgb: #{toRGB($white)};
+}
+
+:root {
+  --bg-sidebar: rgba(var(--secondary-rgb), 90%);
+  --bg-main: rgba(var(--white-rgb), 80%);
+  --bg-card: #{$white};
+  --text-main: #{$black};
+  --text-black: #{$black};
+  --text-white: #{$white};
+  --divider: #{$black};
+  --shadow: rgba(var(--black-rgb), 80%);
+  --shadow-black: rgba(var(--black-rgb), 80%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-sidebar: rgba(var(--black-rgb), 90%);
+    --bg-main: rgba(var(--secondary-rgb), 90%);
+    --bg-card: #{$secondary};
+    --text-main: #{$white};
+    --divider: #{$white};
+    --shadow: rgba(var(--white-rgb), 80%);
+  }
+}
