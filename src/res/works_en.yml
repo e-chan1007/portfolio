@@ -1,0 +1,53 @@
+richmenu-editor:
+  title: Richmenu Editor
+  repo: e-chan1007/line-richmenu-editor
+  url: https://richmenu.app.e-chan.me/
+  description: |-
+    Make rich menus shown at the bottom of the talk window of LINE Official Accounts.
+    You can upload the menu as well as edit it on the GUI.
+  date: 2020/05〜
+  categories:
+  - webapp
+  - devtool
+  frontFramework: react
+  languages: 
+  - JavaScript
+
+pikagoro:
+  title: Pikagoro
+  url: https://pikagoro.app.e-chan.me/
+  description: |-
+    Plot the location where thunder might have fallen by using differences of the speed of sound and light.
+  date: 2020/08
+  categories:
+  - webapp
+  frontFramework: vue
+  languages:
+  - JavaScript
+
+trendowl:
+  title: TrendOwl
+  url: https://trendowl.sugokunaritai.dev/
+  description: |-
+    Distinguish whether tweets are fact or fake based on machine learning.
+    Awarded Code for Japan prize at Civictech Challenge Cup 2021 (in Japan).
+  date: 2021/10
+  categories:
+  - webapp
+  - ml
+  frontFramework: vue
+  languages:
+  - JavaScript
+  - Python
+
+nuxt-monaco-editor:
+  title: Nuxt Monaco Editor
+  url: https://e-chan1007.github.io/nuxt-monaco-editor/
+  repo: e-chan1007/nuxt-monaco-editor
+  description: |-
+    Integrate Monaco Editor with Nuxt.js
+  date: 2022/08〜
+  categories:
+  - library
+  languages:
+  - JavaScript

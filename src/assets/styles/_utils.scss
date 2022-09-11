@@ -1,0 +1,17 @@
+@function toRGB($color) {
+  @return red($color),
+  green($color),
+  blue($color);
+}
+
+@mixin sp {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin transition($props: all, $sec: 0.1s, $func: ease) {
+  transition-property: $props;
+  transition-duration: $sec;
+  transition-timing-function: $func;
+}

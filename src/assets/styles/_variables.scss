@@ -1,0 +1,39 @@
+@import "./utils";
+
+$primary: #0195E6;
+$secondary: #34495E;
+$accent: #F19C20;
+$black: #333333;
+$white: #FFFFFF;
+
+:root {
+  --primary-rgb: #{toRGB($primary)};
+  --secondary-rgb: #{toRGB($secondary)};
+  --accent-rgb: #{toRGB($accent)};
+  --black-rgb: #{toRGB(($black))};
+  --white-rgb: #{toRGB($white)};
+}
+
+:root {
+  --bg-sidebar: rgba(var(--secondary-rgb), 90%);
+  --bg-main: rgba(var(--white-rgb), 80%);
+  --bg-card: #{$white};
+  --bg-menu: #{$white};
+  --bg-menu-active: #{darken($white, 10%)};
+  --text-main: #{$black};
+  --text-black: #{$black};
+  --text-white: #{$white};
+  --divider: #{$black};
+  --shadow: rgba(var(--black-rgb), 80%);
+  --shadow-black: rgba(var(--black-rgb), 80%);
+}
+
+html.dark-mode {
+  --bg-sidebar: rgba(var(--black-rgb), 90%);
+  --bg-main: rgba(var(--secondary-rgb), 90%);
+  --bg-card: #{$secondary};
+  --bg-menu: #{$secondary};
+  --bg-menu-active: #{lighten($secondary, 10%)};
+  --text-main: #{$white};
+  --divider: #{$white};
+}
