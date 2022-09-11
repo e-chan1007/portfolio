@@ -1,4 +1,10 @@
 <template>
+  <Head>
+    <Title>{{ translate("name") }}</Title>
+    <Link rel="preconnect" href="https://fonts.googleapis.com" />
+    <Link rel="preconnect" href="https://fonts.gstatic.com" />
+    <Link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  </Head>
   <div class="wrapper">
     <nav>
       <NavMenu />
@@ -43,8 +49,6 @@ import "modern-normalize/modern-normalize.css";
 const contents = useContent();
 const articles = await useArticles();
 const translate = useTranslate();
-
-useHead({ title: translate("name") });
 </script>
 
 <style lang="scss">
@@ -58,6 +62,8 @@ body,
   min-height: 100%;
   margin: 0;
   color: var(--text-main);
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+  line-height: 1.6em;
   @include transition(color);
 }
 
