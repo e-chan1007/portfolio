@@ -4,5 +4,5 @@ import { defineNuxtConfig } from "nuxt";
 export default defineNuxtConfig({
   srcDir: "src",
   typescript: { strict: true },
-  modules: ["nuxt-icon", "@vueuse/nuxt"]
+  modules: ["nuxt-icon", "@nuxtjs/color-mode", "@vueuse/nuxt"]
 });

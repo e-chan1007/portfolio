@@ -21,7 +21,6 @@ defineProps<Props>();
 
 <style lang="scss" scoped>
 @import "~/assets/styles/utils";
-@import "~/assets/styles/variables";
 
 .card {
   position: relative;

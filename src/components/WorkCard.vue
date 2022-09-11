@@ -6,9 +6,9 @@
     </div>
   </button>
 
-  <Modal :active="isActive" @click-outside="isActive = false">
+  <Modal v-model:active="isActive" @click-outside="isActive = false">
     <h1>{{ work.title }}</h1>
-    <img v-if="id" :src="`/img/${id}.webp`" class="card-image">
+    <img v-if="id" :src="`/img/${id}.webp`" class="modal-image">
     <ul class="details">
       <li v-if="work.url">
         <Icon name="octicon:globe-16" />
@@ -24,7 +24,9 @@
       </li>
       <li>
         <Icon name="octicon:tag-16" />
-        <span v-for="tag, i in tags" :key="i" class="tag">{{tag}}</span>
+        <div>
+          <span v-for="tag, i in tags" :key="i" class="tag">{{tag}}</span>
+        </div>
       </li>
       <li>
         <Icon name="octicon:calendar-16" />{{ work.date }}
@@ -71,6 +73,8 @@ const tags = computed(() => [
   background: none;
   border: none;
   padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
 
   @include transition;
 
@@ -81,7 +85,7 @@ const tags = computed(() => [
 
   &:hover {
     cursor: pointer;
-    box-shadow: 0 4px 4px var(--shadow);
+    box-shadow: 0 2px 4px var(--shadow);
   }
 
   &-overlay {
@@ -101,17 +105,26 @@ const tags = computed(() => [
   }
 }
 
+.modal-image {
+  width: 100%;
+  pointer-events: none;
+  border-radius: 4px;
+}
+
 .details {
   padding: 0;
   list-style-type: none;
 
   li {
-    margin-bottom: 4px;
-  }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
 
-  .icon {
-    margin-right: 8px;
-    transform: translateY(-2px);
+    .icon {
+      flex-shrink: 0;
+    }
   }
 
   a {
@@ -126,6 +139,7 @@ const tags = computed(() => [
 
 .description {
   white-space: pre-line;
+  margin-bottom: 0;
 }
 
 section {

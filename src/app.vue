@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <nav>
+      <NavMenu />
       <img class="icon" src="/img/icon.webp" />
       <p>{{ translate("name") }}</p>
       <div>{{ contents.profile }}</div>
@@ -42,6 +43,8 @@ import "modern-normalize/modern-normalize.css";
 const contents = useContent();
 const articles = await useArticles();
 const translate = useTranslate();
+
+useHead({ title: translate("name") });
 </script>
 
 <style lang="scss">
@@ -55,13 +58,14 @@ body,
   min-height: 100%;
   margin: 0;
   color: var(--text-main);
+  @include transition(color);
 }
 
 body {
   background-image: url("/img/background.webp");
   background-size: cover;
   background-attachment: fixed;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -86,6 +90,8 @@ nav {
   background-color: var(--bg-sidebar);
   color: var(--text-white);
 
+  @include transition((color, background-color));
+
   @include sp {
     width: 100%;
     height: auto;
@@ -106,10 +112,18 @@ nav {
 
       &:not(:last-of-type) {
         margin-right: 16px;
+
+        @include sp {
+          margin-right: 24px;
+        }
       }
 
       a {
         color: inherit;
+      }
+
+      @include sp {
+        font-size: 1.4em;
       }
     }
   }
@@ -119,6 +133,8 @@ main {
   background-color: var(--bg-main);
   width: 100%;
   height: 100%;
+  padding: 8px 0 24px 0;
+  @include transition(background-color);
 }
 
 .container {
@@ -127,6 +143,12 @@ main {
   height: 100%;
   margin: 0 auto;
   padding: 0 16px;
+
+  @include sp {
+    width: calc(100% - 64px);
+    margin: 0 32px;
+    padding: 0;
+  }
 }
 
 .works {

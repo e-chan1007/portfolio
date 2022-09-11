@@ -4,7 +4,7 @@ richmenu-editor:
   url: https://richmenu.app.e-chan.me/
   description: |-
     Make rich menus shown at the bottom of the talk window of LINE Official Accounts.
-    You can not only edit JSON or on the GUI but also upload.
+    You can upload the menu as well as edit it on the GUI.
   date: 2020/05〜
   categories:
   - webapp

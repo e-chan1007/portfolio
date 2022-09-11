@@ -10,6 +10,8 @@
   }
 }
 
-@mixin transition($sec: 0.1s, $prop: all, $func: ease) {
-  transition: $prop $func $sec;
+@mixin transition($props: all, $sec: 0.1s, $func: ease) {
+  transition-property: $props;
+  transition-duration: $sec;
+  transition-timing-function: $func;
 }
