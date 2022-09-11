@@ -4,5 +4,10 @@ import { defineNuxtConfig } from "nuxt";
 export default defineNuxtConfig({
   srcDir: "src",
   typescript: { strict: true },
-  modules: ["nuxt-icon", "@nuxtjs/color-mode", "@vueuse/nuxt"]
+  modules: [
+    "@nuxt/image-edge",
+    "@nuxtjs/color-mode",
+    "@vueuse/nuxt",
+    "nuxt-icon"
+  ]
 });

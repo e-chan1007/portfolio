@@ -1,14 +1,15 @@
 <template>
-  <Head>
-    <Title>{{ translate("name") }}</Title>
-    <Link rel="preconnect" href="https://fonts.googleapis.com" />
-    <Link rel="preconnect" href="https://fonts.gstatic.com" />
-    <Link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  </Head>
+  <Html :lang="language" />
+  <Title>{{ translate("name") }}</Title>
+  <Meta name="description" :content="translate('siteDescription')" />
+  <Link rel="preconnect" href="https://fonts.googleapis.com" />
+  <Link rel="preconnect" href="https://fonts.gstatic.com" />
+  <Link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
   <div class="wrapper">
     <nav>
       <NavMenu />
-      <img class="icon" src="/img/icon.webp" />
+      <NuxtImg class="icon" src="/img/icon.webp" :alt="translate('nav', 'iconAlt')" width="128" height="128" />
       <p>{{ translate("name") }}</p>
       <div>{{ contents.profile }}</div>
       <ul class="links">
@@ -48,6 +49,7 @@ import "modern-normalize/modern-normalize.css";
 
 const contents = useContent();
 const articles = await useArticles();
+const language = useLanguage();
 const translate = useTranslate();
 </script>
 

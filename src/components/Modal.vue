@@ -2,7 +2,7 @@
   <Teleport to="body">
     <div class="modal-wrapper" :class="{ active }" @click.self="emit('click-outside')">
       <div class="modal">
-        <button class="close-button" @click="active = false">
+        <button class="close-button" @click="active = false" :aria-label="translate('modal', 'closeLabel')">
           <Icon name="octicon:x-16" />
         </button>
         <slot />
@@ -21,6 +21,7 @@ interface Emits {
 const props = defineProps<Props>();
 const { active } = useVModels(props);
 const emit = defineEmits<Emits>();
+const translate = useTranslate();
 </script>
 
 <style lang="scss" scoped>

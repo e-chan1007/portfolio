@@ -1,6 +1,14 @@
 <template>
-  <button class="card" @click="isActive = true">
-    <img v-if="id" :src="`/img/${id}.webp`" class="card-image">
+  <button class="card" @click="isActive = true" :aria-label="work.title">
+    <NuxtImg
+      v-if="id"
+      :src="`/img/${id}.webp`"
+      class="card-image"
+      :alt="work.title"
+      quality="80"
+      sizes="sm:100% lg:500px"
+      width="1200"
+      height="900" />
     <div class="card-overlay">
       {{ work.title }}
     </div>
@@ -8,7 +16,14 @@
 
   <Modal v-model:active="isActive" @click-outside="isActive = false">
     <h1>{{ work.title }}</h1>
-    <img v-if="id" :src="`/img/${id}.webp`" class="modal-image">
+    <NuxtImg
+      v-if="id"
+      :src="`/img/${id}.webp`"
+      class="modal-image"
+      :alt="work.title"
+      sizes="sm:100% lg:700px"
+      width="1200"
+      height="900"/>
     <ul class="details">
       <li v-if="work.url">
         <Icon name="octicon:globe-16" />
@@ -80,6 +95,7 @@ const tags = computed(() => [
 
   &-image {
     width: 100%;
+    height: auto;
     pointer-events: none;
   }
 
@@ -107,6 +123,7 @@ const tags = computed(() => [
 
 .modal-image {
   width: 100%;
+  height: auto;
   pointer-events: none;
   border-radius: 4px;
 }

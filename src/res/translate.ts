@@ -25,7 +25,15 @@ declare global {
       color: string,
       language: string
     },
-    name: string
+    modal: {
+      closeLabel: string
+    }
+    name: string,
+    nav: {
+      iconAlt: string,
+      toggleLabel: string
+    },
+    siteDescription: string
   }
 }
 
@@ -55,7 +63,13 @@ export default {
       language: "Language(言語)",
       terminal: "Terminal"
     },
-    name: "e_chan1007"
+    modal: { closeLabel: "Close" },
+    name: "e_chan1007",
+    nav: {
+      iconAlt: "Profile image",
+      toggleLabel: "Toggle menu"
+    },
+    siteDescription: "The portfolio of e_chan1007."
   },
   ja: {
     categories: {
@@ -64,7 +78,6 @@ export default {
       ml: "機械学習",
       webapp: "Webアプリ"
     },
-
     colors: {
       dark: "ダーク",
       light: "ライト",
@@ -83,6 +96,12 @@ export default {
       language: "言語(Language)",
       terminal: "Terminal"
     },
-    name: "いーちゃん"
+    modal: { closeLabel: "閉じる" },
+    name: "いーちゃん",
+    nav: {
+      iconAlt: "プロフィール画像",
+      toggleLabel: "メニューを開閉"
+    },
+    siteDescription: "いーちゃんのポートフォリオ"
   }
 } as Record<Languages, TranslateMap>;

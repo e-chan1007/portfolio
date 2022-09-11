@@ -1,6 +1,6 @@
 <template>
   <div class="menu" ref="menu">
-    <button class="toggle-button" @click="active = !active">
+    <button class="toggle-button" @click="active = !active" :aria-label="translate('nav', 'toggleLabel')">
       <Icon name="octicon:three-bars-16" />
     </button>
     <ul class="dropdown" :class="{ active }">

@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@e-chan1007/eslint-config-vue": "^1.0.7",
+    "@nuxt/image-edge": "latest",
     "@nuxtjs/color-mode": "^3.1.5",
     "@types/marked": "^4.0.7",
     "@vueuse/core": "^9.2.0",
