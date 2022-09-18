@@ -5,7 +5,6 @@
   <Link rel="preconnect" href="https://fonts.googleapis.com" />
   <Link rel="preconnect" href="https://fonts.gstatic.com" />
   <Link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="styles.css"></noscript>
   <div class="wrapper">
     <nav>
       <NavMenu />
