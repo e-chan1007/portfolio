@@ -29,7 +29,7 @@
         <section>
           <h1>{{ translate("headers", "works") }}</h1>
           <div class="works">
-            <WorkCard v-for="work, id in contents.works" :key="id" :id="id" :work="work" />
+            <WorkCard v-for="work, id in contents.works" :id="id" :key="id" :work="work" />
           </div>
         </section>
         <section>

@@ -2,7 +2,6 @@ import yaml from "yaml";
 
 import profileJa from "~/res/profile.md?raw";
 import profileEn from "~/res/profile_en.md?raw";
-
 import worksJa from "~/res/works.yml?raw";
 import worksEn from "~/res/works_en.yml?raw";
 
@@ -18,6 +17,8 @@ declare global {
     languages: string[]
   }
 }
+
+const t: Array<Work[]> = [];
 
 const language = useLanguage();
 
