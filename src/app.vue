@@ -3,7 +3,7 @@
   <Title>{{ translate("name") }}</Title>
   <Meta name="description" :content="translate('siteDescription')" />
   <Link rel="preconnect" href="https://fonts.googleapis.com" />
-  <Link rel="preconnect" href="https://fonts.gstatic.com" />
+  <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <Link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <div class="wrapper">
     <nav>

@@ -42,7 +42,7 @@ trendowl:
 
 nuxt-monaco-editor:
   title: Nuxt Monaco Editor
-  url: https://e-chan1007.github.io/nuxt-monaco-editor/ja/
+  url: https://e-chan1007.github.io/nuxt-monaco-editor/
   repo: e-chan1007/nuxt-monaco-editor
   description: |-
     Nuxt.jsでMonaco Editorを簡単に使えるようにするモジュールです。
